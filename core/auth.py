@@ -1,11 +1,7 @@
 import streamlit as st
 
 def credenciales(username, password):
-    users = {
-        "CO1088260844": "MB0844",
-        "CO1088282417": "DP2417",
-        "CO1013629717": "JN9717"
-    }
+    users = st.secrets["users"]
     return username in users and users[username] == password
 
 def login_interface():
