@@ -12,8 +12,7 @@ def generate_scroller_html(df):
     items_html_double = items_html + items_html
 
     html_content = f"""
-    <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 100vw;
-    height: 37px; position: fixed; left: 0; top: 0;
+    <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 100%; height: 37px; position: relative;
     background-color: white; color: black; z-index: 2000; display: flex; align-items: center;">
         <div id="scrolling-text" style="display: inline-block;">
             {items_html_double}
@@ -23,7 +22,7 @@ def generate_scroller_html(df):
     <style>
     #scroller {{
         overflow: hidden;
-        position: fixed;
+        position: relative;
         margin-bottom: 0px;
         display: flex;
         align-items: center;
