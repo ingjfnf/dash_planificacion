@@ -13,7 +13,7 @@ def generate_scroller_html(df):
 
     html_content = f"""
     <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 100%; height: 37px; position: relative;
-    background-color: white; color: black; z-index: 2000; display: flex; align-items: center;">
+    background-color: white; color: black; z-index: 2000; display: flex; align-items: center; line-height: 37px;">
         <div id="scrolling-text" style="display: inline-block;">
             {items_html_double}
         </div>
@@ -34,6 +34,8 @@ def generate_scroller_html(df):
         animation: scroll 110s linear infinite;
         font-weight: bold;
         padding: 0 10px;
+        line-height: 37px;
+        vertical-align: middle;
     }}
     @keyframes scroll {{
         0% {{ transform: translateX(0); }}
@@ -52,7 +54,6 @@ def generate_scroller_html(df):
     </style>
     """
     return html_content
-
 
 
 def maquillaje(df):
