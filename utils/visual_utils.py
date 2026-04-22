@@ -12,8 +12,8 @@ def generate_scroller_html(df):
     items_html_double = items_html + items_html  # Para loop infinito
 
     html_content = f"""
-    <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 100%; height: 50px; position: fixed;top: 50px;
-    left: 0%; transform: translateX(-50%);
+    <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 100%; height: 40px; position: fixed;top: 50px;
+    left: 50%; transform: translateX(-50%);
     background-color: white; color: black; z-index: 2000; display: flex; align-items: center;">
         <div id="scrolling-text" style="display: inline-block;">
             {items_html_double}
