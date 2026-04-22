@@ -9,11 +9,11 @@ def generate_scroller_html(df):
             f"<span>{row['CONCEPTO']} <span style='color:{color};'>{icon}</span> {row['VARIACION']}% &nbsp;&nbsp;&nbsp;&nbsp;</span>"
         )
     items_html = ''.join(items)
-    items_html_double = items_html + items_html  # Para loop infinito
+    items_html_double = items_html + items_html
 
     html_content = f"""
-    <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 92.5%; height: 37px; position: fixed;
-    left: 50%; transform: translateX(-50%);
+    <div id="scroller" style="white-space: nowrap; overflow: hidden; width: 100vw;
+    height: 37px; position: fixed; left: 0; top: 0;
     background-color: white; color: black; z-index: 2000; display: flex; align-items: center;">
         <div id="scrolling-text" style="display: inline-block;">
             {items_html_double}
@@ -23,7 +23,7 @@ def generate_scroller_html(df):
     <style>
     #scroller {{
         overflow: hidden;
-        position: relative;
+        position: fixed;
         margin-bottom: 0px;
         display: flex;
         align-items: center;
